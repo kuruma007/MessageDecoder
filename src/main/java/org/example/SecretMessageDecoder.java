@@ -41,10 +41,10 @@ public class SecretMessageDecoder {
                 if (cols.size() < 3) continue;
 
                 // Skip header
-                if (isHeader) {
+               /* if (isHeader) {
                     isHeader = false;
                     continue;
-                }
+                }*/
 
                 try {
                     int x = Integer.parseInt(cols.get(0).text().trim());
