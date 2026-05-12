@@ -39,9 +39,9 @@ public class SecretMessageDecoder {
                     continue;
                 }*/
                 try {
-                    int x = (cols.get(0).text().trim().matches("\\d+") ? Integer.parseInt(cols.get(0).text().trim()) : 0);
+                    int x = (cols.get(0).text().trim().matches("\\d+") ? (cols.get(0).text().trim().matches("\\d+") ? Integer.parseInt(cols.get(0).text().trim()) : 0) : 0);
                     char ch = cols.get(1).text().trim().charAt(0);
-                    int y = (cols.get(2).text().trim().matches("\\d+") ? Integer.parseInt(cols.get(2).text().trim()) : 0);
+                    int y = (cols.get(2).text().trim().matches("\\d+") ? (cols.get(2).text().trim().matches("\\d+") ? Integer.parseInt(cols.get(2).text().trim()) : 0) : 0);
                     cells.add(new Cell(x, ch, y));
                 } catch (Exception ignored) {
                     // skip malformed rows
